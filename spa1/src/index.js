@@ -1,10 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
+import 'tachyons';
 import App from './App';
 import './index.css';
-import 'tachyons';
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+const container = document.getElementById('root');
+const root = createRoot(container); // <-- This is the new API
+
+root.render(<App />);
+

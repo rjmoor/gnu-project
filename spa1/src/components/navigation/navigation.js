@@ -3,23 +3,23 @@ import './Nav.css';
 
 const Navigation = () => {
     return (
-        <div className="Navigation flex mv3">
-            <div className="outline link w-25 pa1 mr2">
-            <p>Here</p>
+        <nav className="Navigation flex mv3">
+            <div className="link pointer outline dim w-25 pa1 mh2">
+            <p className='center w-25'>Here</p>
             </div>
-            <div class="outline w-25 pa1 mr2">
-            <p>There</p>
+            <div className="link pointer outline dim w-25 pa1 mr2">
+            <p className='center w-25'>There</p>
             </div>
-            <div class="outline w-25 pa1 mr2">
-            <p>Elsewhere</p>
+            <div className="link pointer outline dim w-25 pa1 mr2">
+            <p className='center w-25'>Elsewhere</p>
             </div>
-            <div class="outline w-25 pa1 mr2">
-            <p>Anywhere</p>
+            <div className="link pointer outline dim w-25 pa1 mr2">
+            <p className='center w-25'>Anywhere</p>
             </div>
-            <div class="outline w-25 pa1 mr2">
-            <p>Nowhere</p>
+            <div className="link pointer outline dim w-25 pa1 mr2">
+            <p className='center w-25'>Nowhere</p>
             </div>
-         </div>
+         </nav>
     );
 }
 
