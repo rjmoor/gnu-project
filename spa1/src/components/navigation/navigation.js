@@ -1,25 +1,20 @@
 import React from 'react';
-import './Nav.css';
+import './Navigation.css';
+import HeaderItems from './headerItems';
 
-const Navigation = () => {
+const Navigation = ({onRouteChange}) => {
     return (
-        <nav className="Navigation flex mv3">
-            <div className="link pointer outline dim w-25 pa1 mh2">
-            <p className='center w-25'>Here</p>
+        <nav className="Navigation mv3">
+            <div className="flex flex-row">
+                {HeaderItems.map((item) => {
+                    return (
+                        <div key={item.id} className={item.cName}>
+                            <p onClick={() => onRouteChange(item.path)} className={item.pStyle}>{item.title}</p>
+                        </div>
+                    )
+                })}
             </div>
-            <div className="link pointer outline dim w-25 pa1 mr2">
-            <p className='center w-25'>There</p>
-            </div>
-            <div className="link pointer outline dim w-25 pa1 mr2">
-            <p className='center w-25'>Elsewhere</p>
-            </div>
-            <div className="link pointer outline dim w-25 pa1 mr2">
-            <p className='center w-25'>Anywhere</p>
-            </div>
-            <div className="link pointer outline dim w-25 pa1 mr2">
-            <p className='center w-25'>Nowhere</p>
-            </div>
-         </nav>
+    </nav>
     );
 }
 
