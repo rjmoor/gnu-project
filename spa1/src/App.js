@@ -37,9 +37,9 @@ class App extends Component {
           : <div>
             <Navigation onRouteChange={this.onRouteChange} />
             <Main />
-            <Footer onRouteChange={this.onRouteChange}/>
           </div>
         }
+        <Footer />
       </div>
     );
   }
