@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Background from './components/background/background';
 import Navigation from './components/navigation/navigation';
+import Register from './components/navigation/register/register';
 import Signin from './components/navigation/signin.signout/signin';
 import Logo from './components/static/logo/logo';
 import Main from './components/views/main';
@@ -11,8 +12,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      route: 'home',
-      isSignedIn: 'False'
+      route: 'signin',
+      isSignedIn: false
     }
   }
 
@@ -26,20 +27,32 @@ class App extends Component {
   }
   
   render() {
+    const { route } = this.state;
+
+    let content;
+    if (route === 'signin' || route === 'signout') {
+      content = (
+        <div>
+          <Logo />
+          <Signin onRouteChange={this.onRouteChange} />
+        </div>
+      );
+    } else if (route === 'register') {
+      content = <Register onRouteChange={this.onRouteChange} />;
+    } else {
+      content = (
+        <div>
+          <Navigation onRouteChange={this.onRouteChange} />
+          <Main />
+          <Footer />
+        </div>
+      );
+    }
+
     return (
       <div className="App">
         <Background />
-        {this.state.route === 'signin' || this.state.route === 'signout'
-          ? <div>
-            <Logo />
-            <Signin onRouteChange={this.onRouteChange} />
-            </div>
-          : <div>
-            <Navigation onRouteChange={this.onRouteChange} />
-            <Main />
-          </div>
-        }
-        <Footer />
+        {content}
       </div>
     );
   }

@@ -1,4 +1,4 @@
-const HeaderItems= [
+const HeaderItems1= [
     {
         title: 'Here',          // Home button
         path: '/home',
@@ -12,7 +12,7 @@ const HeaderItems= [
         pStyle: 'center'
     },
     {
-        title: 'Elsewhere',     // Company/Industies button
+        title: 'Elsewhere',     // Company/Industries button
         path: '/industries',
         cName: 'nav-links link pointer outline dim w-100',
         pStyle: 'center'
@@ -22,25 +22,7 @@ const HeaderItems= [
         path: '/blogs',
         cName: 'nav-links link pointer outline dim w-100',
         pStyle: 'center'
-    },
-    {
-        title: 'Sign In',       // Sign In button
-        path: '/signin',
-        cName: 'nav-links link pointer outline dim w-100',
-        pStyle: 'center'
-    },
-    {
-        title: 'Sign Out',         // Sign Out button
-        path: '/signout',
-        cName: 'nav-links link pointer outline dim w-100',
-        pStyle: 'center'
-    },
-    {
-        title: 'Register',      // Register button
-        path: '/register',
-        cName: 'nav-links link pointer outline dim w-100',
-        pStyle: 'center'
     }
 ]
 
-export default HeaderItems;
+export default HeaderItems1;

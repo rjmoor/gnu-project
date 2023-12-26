@@ -1,11 +1,19 @@
 import React from 'react';
-import "../navigation/Navigation.css"
 import FooterItems from '../navigation/footerItems';
 
-const Footer = () => {
+
+const Footer = ({onRouteChange}) => {
     return (
-        <div>
-            <p className='ma5 pt2'>Footer</p>
+        <div className="Footer mv3">
+            <div className="flex flex-row">
+                {FooterItems.map((item) => {
+                    return (
+                        <div key={item.id} className={item.cName}>
+                            <p onClick={() => onRouteChange(item.path)} className={item.pStyle}>{item.title}</p>
+                        </div>
+                    )
+                })}
+            </div>
         </div>
     )
 }
